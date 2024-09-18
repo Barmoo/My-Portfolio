@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 71px;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.nav-items a{
+    color: white;
+    text-decoration: none;
+}
