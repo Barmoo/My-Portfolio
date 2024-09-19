@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color: black; */
+
 }
 
 nav {
@@ -9,9 +9,11 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     height: 71px;
+    width: 100vw;
     align-items: center;
     background-color: black;
     color: white;
+    position: fixed;
 }
 
 .nav-items {
@@ -26,7 +28,7 @@ nav {
 }
 
 section #bio {
-    width: 15%;
+    width: 30%;
 }
 
 .hero {
@@ -39,10 +41,8 @@ section #bio {
 .hero-text {
     width: 50%;
     padding-left: 2rem;
-    padding-top: 2rem;
+    padding-top: 4rem;
     color: white;
-
-
 }
 
 .hero-text h3 {
@@ -139,16 +139,6 @@ section #bio {
     width: 100%;
     height: 80vh;
 }
-/* .resume1{ */
-    /* display: flex;
-    column-gap: 10px;
-    justify-content: space-around;
-    width: 80%;
-    height: 100%;
-
-} */
-
-
  .resume-container{
     display: flex;
     flex-direction: row;
@@ -217,7 +207,7 @@ section #bio {
     font-size: 20px;
     color: white;
     margin: 20px;
-    /* margin-bottom: 50px; */
+    
 }
 .div2{
     height: 100px;
@@ -240,13 +230,24 @@ section #bio {
     margin-left: 30px;
 }
 
+.div1 p{
+    margin-left: 70px;
+    margin-top: 30px;
+}
+ .div2 p{
+    margin-left: 70px;
+    margin-top: 30px;
+}
+ .div3 p{
+    margin-left: 70px;
+    margin-top: 30px;
+}
 .services-2{
     margin-left: 550px;
     margin-top: 40px;
     color: white;
 }
 .services-3{
-    /* margin-top: 400px;    */
     height: 300px;
     background-color: #1A1A1A;
 }
@@ -263,17 +264,78 @@ section #bio {
     align-items: center;
 
 }
- 
-.div1 p{
+.skills1{
+    height: 100px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.199);;
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+    
+}
+.skills2{
+    height: 100px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.199);
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+.skills3{
+    height: 100px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.199);
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+.skils-element{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    margin: 80%;
+
+}
+.skills1 p{
     margin-left: 70px;
     margin-top: 30px;
 }
- .div2 p{
+ .skills2 p{
     margin-left: 70px;
     margin-top: 30px;
 }
- .div3 p{
+ .skills3 p{
     margin-left: 70px;
     margin-top: 30px;
 }
- 
+.skill-set{
+    background-color: black;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+.contact-items{
+    display: flex;
+    flex-direction: row;
+    row-gap: 50px;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 30vh;
+    padding-top: 60px;
+    background-color: black;
+    color: white;
+
+}
