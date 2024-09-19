@@ -1,8 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    /* background-color: black; */
 }
-nav{
+
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -11,15 +13,270 @@ nav{
     background-color: black;
     color: white;
 }
-.nav-items{
+
+.nav-items {
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
-.nav-items a{
+
+.nav-items a {
     color: white;
     text-decoration: none;
 }
+
 section #bio {
     width: 15%;
 }
+
+.hero {
+    display: flex;
+    width: 100%;
+    background-color: black;
+
+}
+
+.hero-text {
+    width: 50%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    color: white;
+
+
+}
+
+.hero-text h3 {
+    font-size: 50px;
+
+}
+
+.img {
+    width: 50%;
+}
+
+.sub-hero {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.subhero-text { 
+    height: 400px;
+    width: 40%;
+    margin-right: 10%;
+    margin-left: 5%;
+    
+}
+
+.img2 {
+    height: 400px;
+    width: 40%;
+    margin-left: 10%;
+    
+}
+.img2 img{
+    width: 100%;
+    height: 100%;
+}
+.subhero-text h1{
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+}
+.subhero-text p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: gray;
+}
+.subhero-text h4{
+    margin-bottom: 15px;
+    color: gray;
+}
+.subhero-text h2{
+    margin-top: 20px;
+    color: white;
+}
+.span-color{
+    color: white;
+}
+.span-4-color{
+    color: orange;
+
+}
+.subhero-text2{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+
+    
+}
+.subhero-text2 h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+
+}
+.statement{
+    margin-bottom: 5px;
+    align-items: center;
+    color: white;
+    
+}
+.vitae{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+/* .resume1{ */
+    /* display: flex;
+    column-gap: 10px;
+    justify-content: space-around;
+    width: 80%;
+    height: 100%;
+
+} */
+
+
+ .resume-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+ }
+ .resume1{
+    width: 500px;
+    height: 300px;
+    background-color: #1A1A1A   ;
+    margin-left: 15%;
+
+ }
+ .resume2{
+    width: 500px;
+    height: 300px;
+    background-color:#1A1A1A;
+    margin-right: 10%;
+    margin-left: 5%;
+ }
+
+
+.resume-1 h2{
+    margin: 20px;
+    color: orange;
+    font-size: 40px;
+    font-weight: 40px;
+
+}
+.resume-2 h2{
+    margin: 20px;
+    color: orange;
+    font-size: 40px;
+    font-weight: 40px;
+
+}
+ .features{
+    margin: 20px;
+    color: white;
+    font-size: 30px;
+
+} 
+.resume-2 p{
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+.resume-1 p{
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+.services{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center;
+    
+    margin-bottom: 5px;
+    align-items: center;
+    color: aqua; */
+    margin-left: 60px;
+}
+.div1{
+    height: 100px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.199)  ;;
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+    /* margin-bottom: 50px; */
+}
+.div2{
+    height: 100px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.199)  ;;
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+.div3{
+    height: 100px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.199)  ;
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+
+.div2,.div3{
+    margin-left: 30px;
+}
+
+.services-2{
+    margin-left: 550px;
+    margin-top: 40px;
+    color: white;
+}
+.services-3{
+    /* margin-top: 400px;    */
+    height: 300px;
+    background-color: #1A1A1A;
+}
+.services-p{
+    margin-left: 400px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: white;
+}
+.services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+ 
+.div1 p{
+    /* margin: 50%; */
+    margin-left: 70px;
+    margin-top: 30px;
+}
+ .div2 p{
+    /* margin: 50%; */
+    margin-left: 70px;
+    margin-top: 30px;
+}
+ .div3 p{
+    /* margin: 50%; */
+    margin-left: 70px;
+    margin-top: 30px;
+}
+ 
