@@ -7,11 +7,24 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navItems = document.querySelector(".nav-items");
+
+            hamburger.addEventListener("click", () => {
+                navItems.classList.toggle("show");
+            });
+        });
+    </script>
 </head>
 
 <body>
     <nav>
         <h2 class="text-white">BELINDA</h2>
+        <button class="hamburger">
+            <i class="fa fa-bars"></i>
+        </button>
         <div class="nav-items">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -53,7 +66,7 @@
     </section>
     <section id="resume" class="vitae">
         <div class="subhero-text2">
-            <h1>Resume</h1>
+            <h1>RESUME</h1>
             <div class="statement"> Life is a daring adventure or nothing</div>
             <div class="resume-container">
                 <div class="resume1">
@@ -77,28 +90,7 @@
         <a href="./assets/BELINDA ARMOO - Belinda Armoo.docx.pdf"><button class="button2-cv">DOWNLOAD CV</button></a>
         </div>
     </section>
-    
-    <section class="services-3" id="services">
-        <h1 class="services-2">SERVICES</h1>
-        <div class="services-p">
-            <p>We offer a range of services to meet your needs:</p>
-        </div>
-        <div class="services">
-            <div class="service-item">
-                <h2>Web Development</h2>
-                <p>Creating responsive and user-friendly websites tailored to your business needs.</p>
-            </div>
-            <div class="service-item">
-                <h2>Building an API</h2>
-                <p>Developing robust APIs to enable seamless integration and data exchange between applications.</p>
-            </div>
-            <div class="service-item">
-                <h2>Data Encryption</h2>
-                <p>Implementing secure data encryption methods to protect sensitive information.</p>
-            </div>
-        </div>
-    </section> 
-    <!-- <section id="services" class="services-3">
+    <section id="services" class="services-3">
         <h2 class="services-2">SERVICES</h2>
         <div class="services-p">
 
@@ -119,7 +111,7 @@
 
         </div>
 
-    </section> -->
+    </section>
     <div id="skills" class="skills-background">
         <h1 class="skills">MY SKILLS</h1>
 

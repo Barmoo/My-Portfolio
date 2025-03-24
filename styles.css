@@ -27,6 +27,20 @@ nav {
     gap: 1rem; /* Adjust gap for better spacing */
     list-style: none;
     flex-grow: 1; /* Ensure items take up available space */
+    background-color: #333; /* Dark background for dropdown */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add depth */
+    z-index: 9; /* Ensure it appears above other content */
+    display: none; /* Hidden by default */
+}
+
+.nav-items.show {
+    display: flex; /* Show the menu when toggled */
 }
 
 .nav-items a {
@@ -37,6 +51,9 @@ nav {
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Full width for links */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-items a:hover {
@@ -49,6 +66,25 @@ nav {
     background-color: rgba(255, 165, 0, 0.3); /* Add subtle background */
     font-weight: bold; /* Emphasize active link */
     border-bottom: 2px solid orange; /* Add underline effect */
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 2rem; /* Larger size for better visibility */
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10; /* Ensure it stays above other elements */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: orange; /* Highlight on hover */
+    transform: scale(1.2); /* Slight zoom effect */
 }
 
 section #bio {
@@ -252,7 +288,7 @@ section #bio {
 /* Center and style the SERVICE heading */
 .services-2 {
     text-align: center; /* Center the text */
-    color: orange;
+    color: white;
     font-size: 2.5rem; /* Slightly larger font size for emphasis */
     margin: 0 auto; /* Center the heading and remove excess space */
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Add a glowing effect */
@@ -286,12 +322,12 @@ section #bio {
 }
 
 /* Style text inside service boxes */
-.div1 p, .div2 p, .div3 p {
+/* .div1 p, .div2 p, .div3 p {
     margin: 0;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.2rem; /* Slightly larger text */
-}
+ */
 
 .services-2 {
     margin-left: 550px;
@@ -311,135 +347,53 @@ section #bio {
 }
 
 .skills-background {
-    background-color: black;
-    margin: 0;
+    background: linear-gradient(120deg, #1A1A1A, #2C2C2C); /* Sleek gradient */
+    padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
-    padding: 100px 0;
-    background: linear-gradient(120deg, #000000, #1A1A1A);
-    padding: 4rem 2rem;
+    align-items: center;
+    row-gap: 3rem;
+    color: white;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Add depth */
 }
 
 .skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-}
-
-.skils-element {
-    display: flex;
-    flex-direction: row;
+    display: grid; /* Grid layout for alignment */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Spacing between items */
     width: 100%;
-    height: 60px;
-    margin: 80%;
+    justify-content: center;
+    text-align: center;
 }
 
-.skills1 {
-    height: 100px;
-    width: 400px;
-    background-color: rgba(128, 128, 128, 0.199);
-    font-size: 20px;
+.skills1, .skills2, .skills3 {
+    background: linear-gradient(135deg, #333333, #444444); /* Gradient for cards */
+    height: 150px; /* Adjust height */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem; /* Larger text */
+    font-weight: bold;
     color: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.skills2 {
-    height: 100px;
-    width: 400px;
-    background-color: rgba(128, 128, 128, 0.199);
-    font-size: 20px;
-    color: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.skills3 {
-    height: 100px;
-    width: 400px;
-    background-color: rgba(128, 128, 128, 0.199);
-    font-size: 20px;
-    color: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .skills1:hover, .skills2:hover, .skills3:hover {
-    background-color: rgba(255, 165, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.skills1 p {
-    margin-left: 70px;
-    margin-top: 30px;
-}
-
-.skills2 p {
-    margin-left: 70px;
-    margin-top: 30px;
-}
-
-.skills3 p {
-    margin-left: 70px;
-    margin-top: 30px;
-}
-
-.skill-set {
-    display: flex;
-    flex-direction: row;
-    margin-left: 75px;
-    margin-right: 20px;
-}
-
-.div01 {
-    height: 100px;
-    width: 30%;
-    background-color: #1A1A1A;
-    margin-right: 5%;
-    color: white;
-}
-
-.div02 {
-    height: 100px;
-    width: 30%;
-    margin-right: 5%;
-    background-color: #1A1A1A;
-    color: white;
-}
-
-.div03 {
-    height: 100px;
-    width: 30%;
-    background-color: #1A1A1A;
-    color: white;
-}
-
-.div01 p {
-    margin-left: 40%;
-    margin-top: 10%;
-}
-
-.div02 p {
-    margin-left: 40%;
-    margin-top: 10%;
-}
-
-.div03 p {
-    margin-left: 40%;
-    margin-top: 10%;
+    background: linear-gradient(135deg, #FF4500, #FFA500); /* Brighter gradient for hover */
+    transform: scale(1.15); /* Slightly larger zoom */
+    box-shadow: 0 15px 30px rgba(255, 140, 0, 0.7); /* More pronounced shadow */
+    border: 2px solid #FFA500; /* Add a border for emphasis */
 }
 
 .skills-move {
-    margin-left: 40%;
+    margin-left: auto; /* Center align */
+    margin-right: auto; /* Center align */
     margin-top: 40px;
+    text-align: center; /* Center text */
 }
 
 .contact {
@@ -451,28 +405,33 @@ section #bio {
     padding: 3rem 2rem;
 }
 
+/* Contact Items */
 .contact-items {
     display: flex;
-    flex-direction: row;
-    row-gap: 50px;
-    width: 100%;
-    justify-content: space-evenly;
-    height: 30vh;
-    padding-top: 60px;
-    background-color: black;
-    color: white;
+    flex-wrap: wrap;
+    gap: 2rem; /* Add spacing between items */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Add padding for better spacing */
+    background-color: #1A1A1A; /* Dark background for contrast */
+    border-radius: 15px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add depth */
 }
 
 .contact-items div {
-    flex: 1 1 200px;
+    flex: 1 1 200px; /* Responsive sizing */
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #333333, #444444); /* Gradient background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-items div:hover {
-    background-color: rgba(255, 165, 0, 0.2);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #FF8C00, #FFA500); /* Bright hover effect */
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 12px 24px rgba(255, 165, 0, 0.6); /* Enhanced shadow */
 }
 
 .hero-button {
@@ -696,13 +655,47 @@ nav {
 .contact-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem; /* Add spacing between items */
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    padding: 2rem; /* Add padding for better spacing */
+    background-color: #1A1A1A; /* Dark background for contrast */
+    border-radius: 15px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add depth */
 }
 
 .contact-items div {
-    flex: 1 1 200px;
+    flex: 1 1 200px; /* Responsive sizing */
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #333333, #444444); /* Gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-items div:hover {
+    background: linear-gradient(135deg, #FF8C00, #FFA500); /* Bright hover effect */
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 12px 24px rgba(255, 165, 0, 0.6); /* Enhanced shadow */
+}
+
+/* Responsive styles for Resume section */
+@media (max-width: 768px) {
+    .resume-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume1, .resume2 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .resume-1, .resume-2 {
+        text-align: center;
+    }
 }
 
 /* Media queries for smaller screens */
@@ -768,8 +761,28 @@ nav {
     }
 
     .contact-items {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem; /* Adjust spacing */
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    .nav-items {
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    .nav-items a {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .contact-items {
         flex-direction: column;
         align-items: center;
+        gap: 1rem; /* Add spacing between items */
+        padding: 1rem; /* Add padding for better spacing */
     }
 }
 
@@ -814,5 +827,18 @@ nav {
     .button, .button-cv, .button2-cv {
         padding: 8px 16px;
         font-size: 0.9rem;
+    }
+
+    .contact-items {
+        gap: 0.5rem; /* Reduce spacing for smaller screens */
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    .hamburger {
+        font-size: 1.5rem; /* Adjust size */
+    }
+
+    .nav-items a {
+        font-size: 0.8rem; /* Further reduce font size */
     }
 }
