@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -11,20 +12,43 @@ nav {
     height: 71px;
     width: 100vw;
     align-items: center;
-    background-color: black;
+    background: linear-gradient(90deg, #000000, #1A1A1A);
     color: white;
     position: fixed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 0 2rem;
 }
 
 .nav-items {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center align items */
+    align-items: center;
+    gap: 1rem; /* Adjust gap for better spacing */
+    list-style: none;
+    flex-grow: 1; /* Ensure items take up available space */
 }
 
 .nav-items a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-items a:hover {
+    color: orange;
+    background-color: rgba(255, 165, 0, 0.2);
+}
+
+.nav-items a.active {
+    color: orange; /* Highlight active link */
+    background-color: rgba(255, 165, 0, 0.3); /* Add subtle background */
+    font-weight: bold; /* Emphasize active link */
+    border-bottom: 2px solid orange; /* Add underline effect */
 }
 
 section #bio {
@@ -34,8 +58,9 @@ section #bio {
 .hero {
     display: flex;
     width: 100%;
-    background-color: black;
-
+    background: linear-gradient(120deg, #000000, #333333);
+    padding: 4rem 2rem;
+    /* border-bottom: 5px solid goldenrod; */
 }
 
 .hero-text {
@@ -47,7 +72,7 @@ section #bio {
 
 .hero-text h3 {
     font-size: 50px;
-
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .img {
@@ -58,8 +83,9 @@ section #bio {
     display: flex;
     width: 100%;
     align-items: center;
-    padding: 20px;
-    background-color: black;
+    padding: 3rem 2rem;
+    background: linear-gradient(120deg, #1A1A1A, #333333);
+    /* border-top: 5px solid goldenrod; */
 }
 
 .subhero-text {
@@ -67,14 +93,12 @@ section #bio {
     width: 40%;
     margin-right: 10%;
     margin-left: 5%;
-
 }
 
 .img2 {
     height: 400px;
     width: 40%;
     margin-left: 10%;
-
 }
 
 .img2 img {
@@ -86,6 +110,7 @@ section #bio {
     font-size: 30px;
     margin-top: 10px;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .subhero-text p {
@@ -110,7 +135,6 @@ section #bio {
 
 .span-4-color {
     color: orange;
-
 }
 
 .subhero-text2 {
@@ -122,8 +146,6 @@ section #bio {
     width: 100%;
     background-color: black;
     height: 100%;
-
-
 }
 
 .subhero-text2 h1 {
@@ -131,18 +153,15 @@ section #bio {
     margin-bottom: 10px;
     text-align: center;
     color: white;
-
 }
 
 .statement {
     margin-bottom: 5px;
     align-items: center;
     color: white;
-
 }
 
 .vitae {
-    /* margin-top: 20px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,6 +175,8 @@ section #bio {
     display: flex;
     flex-direction: row;
     width: 100%;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .resume1 {
@@ -163,7 +184,9 @@ section #bio {
     height: 300px;
     background-color: #1A1A1A;
     margin-left: 15%;
-
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .resume2 {
@@ -172,15 +195,20 @@ section #bio {
     background-color: #1A1A1A;
     margin-right: 10%;
     margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
+.resume1:hover, .resume2:hover {
+    transform: scale(1.05);
+}
 
 .resume-1 h2 {
     margin: 20px;
     color: orange;
     font-size: 40px;
     font-weight: 40px;
-
 }
 
 .resume-2 h2 {
@@ -188,14 +216,12 @@ section #bio {
     color: orange;
     font-size: 40px;
     font-weight: 40px;
-
 }
 
 .features {
     margin: 20px;
     color: white;
     font-size: 30px;
-
 }
 
 .resume-2 p {
@@ -211,74 +237,94 @@ section #bio {
 }
 
 .services {
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center;
-    
-    margin-bottom: 5px;
-    align-items: center;
-    color: aqua; */
-    margin-left: 60px;
+    display: grid; /* Use grid layout for better alignment */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Add spacing between items */
+    padding: 4rem 2rem;
+    background: linear-gradient(120deg, #1A1A1A, #2C2C2C);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .div1 {
-    height: 100px;
-    width: 400px;
-    background-color: rgba(128, 128, 128, 0.199);
-    ;
-    font-size: 20px;
+    height: 150px;
+    width: 300px;
+    background: linear-gradient(135deg, #333333, #444444);
+    font-size: 18px;
     color: white;
     margin: 20px;
-
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .div2 {
-    height: 100px;
-    width: 400px;
-    background-color: rgba(128, 128, 128, 0.199);
-    ;
-    font-size: 20px;
+    height: 150px;
+    width: 300px;
+    background: linear-gradient(135deg, #333333, #444444);
+    font-size: 18px;
     color: white;
     margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .div3 {
-    height: 100px;
-    width: 400px;
-    background-color: rgba(128, 128, 128, 0.199);
-    font-size: 20px;
+    height: 150px;
+    width: 300px;
+    background: linear-gradient(135deg, #333333, #444444);
+    font-size: 18px;
     color: white;
     margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.div2,
-.div3 {
-    margin-left: 30px;
+.div1:hover, .div2:hover, .div3:hover {
+    background: linear-gradient(135deg, #FF8C00, #FFA500);
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(255, 165, 0, 0.6);
 }
 
-.div1 p {
-    margin-left: 70px;
-    margin-top: 30px;
+.div1 p, .div2 p, .div3 p {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem; /* Slightly larger text */
 }
 
-.div2 p {
-    margin-left: 70px;
-    margin-top: 30px;
-}
-
-.div3 p {
-    margin-left: 70px;
-    margin-top: 30px;
+.services h2 {
+    text-align: center;
+    color: orange;
+    font-size: 2.5rem; /* Slightly larger font size */
+    margin-bottom: 3rem; /* Increase spacing below heading */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 .services-2 {
     margin-left: 550px;
-    /* margin-top: 40px; */
     color: white;
 }
 
 .services-3 {
-    /* height: 300px; */
     background-color: #1A1A1A;
 }
 
@@ -290,22 +336,42 @@ section #bio {
     color: white;
 }
 
-.services {
+.skills-background {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding: 100px 0;
+    background: linear-gradient(120deg, #000000, #1A1A1A);
+    padding: 4rem 2rem;
+}
+
+.skills {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    color: white;
+}
 
+.skils-element {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    margin: 80%;
 }
 
 .skills1 {
     height: 100px;
     width: 400px;
     background-color: rgba(128, 128, 128, 0.199);
-    ;
     font-size: 20px;
     color: white;
     margin: 20px;
-
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .skills2 {
@@ -315,6 +381,9 @@ section #bio {
     font-size: 20px;
     color: white;
     margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .skills3 {
@@ -324,32 +393,14 @@ section #bio {
     font-size: 20px;
     color: white;
     margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.skills-background {
-    background-color: black;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 4rem;
-    padding: 100px 0;
-}
-
-.skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-
-}
-
-.skils-element {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 60px;
-    margin: 80%;
-
+.skills1:hover, .skills2:hover, .skills3:hover {
+    background-color: rgba(255, 165, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .skills1 p {
@@ -372,10 +423,6 @@ section #bio {
     flex-direction: row;
     margin-left: 75px;
     margin-right: 20px;
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
-
-
 }
 
 .div01 {
@@ -402,19 +449,16 @@ section #bio {
 }
 
 .div01 p {
-
     margin-left: 40%;
     margin-top: 10%;
 }
 
 .div02 p {
-
     margin-left: 40%;
     margin-top: 10%;
 }
 
 .div03 p {
-
     margin-left: 40%;
     margin-top: 10%;
 }
@@ -428,8 +472,9 @@ section #bio {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: black;
+    background: linear-gradient(120deg, #1A1A1A, #333333);
     color: white;
+    padding: 3rem 2rem;
 }
 
 .contact-items {
@@ -444,12 +489,30 @@ section #bio {
     color: white;
 }
 
+.contact-items div {
+    flex: 1 1 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-items div:hover {
+    background-color: rgba(255, 165, 0, 0.2);
+    transform: scale(1.05);
+}
+
 .hero-button {
     background-color: goldenrod;
     color: #1A1A1A;
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: orange;
+    transform: scale(1.1);
 }
 
 .button {
@@ -458,6 +521,12 @@ section #bio {
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: orange;
+    transform: scale(1.1);
 }
 
 .button-cv {
@@ -466,6 +535,12 @@ section #bio {
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-cv:hover {
+    background-color: orange;
+    transform: scale(1.1);
 }
 
 .button2-cv {
@@ -474,4 +549,272 @@ section #bio {
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button2-cv:hover {
+    background-color: orange;
+    transform: scale(1.1);
+}
+
+.button-service {
+    background-color: #4CAF50; /* Green for service button */
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-service:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.button-download {
+    background-color: #007BFF; /* Blue for download button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-download:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* General responsive styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero section responsiveness */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-text {
+    flex: 1 1 300px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 300px;
+}
+
+/* Sub-hero section responsiveness */
+.sub-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.img2 img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 300px;
+}
+
+.subhero-text {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+/* Resume section responsiveness */
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.resume1, .resume2 {
+    flex: 1 1 300px;
+}
+
+/* Services section responsiveness */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.div1, .div2, .div3 {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+/* Skills section responsiveness */
+.skill-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.div01, .div02, .div03 {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+/* Contact section responsiveness */
+.contact-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-items div {
+    flex: 1 1 200px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    nav h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h3, .hero-text h5 {
+        font-size: 1.2rem;
+    }
+
+    .subhero-text h1, .subhero-text h4, .subhero-text p {
+        font-size: 1rem;
+    }
+
+    .resume-container h2, .resume-container h3, .resume-container h4 {
+        font-size: 1rem;
+    }
+
+    .services p, .skill-set p, .contact-items h3, .contact-items p {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 1rem;
+    }
+
+    .sub-hero {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .resume-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-set {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-items {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media queries for very small screens */
+@media (max-width: 480px) {
+    .hero-text h3, .hero-text h5 {
+        font-size: 1rem;
+    }
+
+    .subhero-text h1, .subhero-text h4, .subhero-text p {
+        font-size: 0.9rem;
+    }
+
+    .resume-container h2, .resume-container h3, .resume-container h4 {
+        font-size: 0.8rem;
+    }
+
+    .services p, .skill-set p, .contact-items h3, .contact-items p {
+        font-size: 0.8rem;
+    }
+
+    nav h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .subhero-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .resume-container h2 {
+        font-size: 1rem;
+    }
+
+    .services p, .skill-set p, .contact-items h3 {
+        font-size: 0.8rem;
+    }
+
+    .button, .button-cv, .button2-cv {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
